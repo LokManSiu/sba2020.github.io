@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/theme-yellow.css">
+<link rel="stylesheet" href="css/roboto.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onClick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-theme-l1">ABC Story</a>
+	<a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">主頁</a>
+    <a href="stories.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">故事選擇</a>
+    <a href="contactandabout.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">關於我們</a></div>
+  </div>
+</div>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onClick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content -->
+<div class="w3-main" style="">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">關於我們</h1>
+      <p>
+      <h3>我們是一個初創機構，目的係為咗令男女老幼能夠獲得閱讀故事的新體驗。我們透過資源蒐集及轉載的方式，收集來自不同地方的故事內容，希望大家能夠培養閱讀的習慣。</h3>
+      </p>
+	  <p><h4>ABC Story<br>地址：香城新域全彎全彎路10號美帝中心2樓全層<br>聯絡電話：24683579<br>傳真：25794680<br>電郵：info@abcstory.net<br><br>管理員：<br>黃奇斯先生 Chris Wong<br>Tel：91356802<br>陳樂兒小姐 Louise Chan<br>Tel：63578024</h4></p>
+    </div>
+  </div>
+
+  <footer id="myFooter">
+    <div class="w3-bottom w3-container w3-theme-l1">
+      <p>Complete by Siu Lok Man, 6D 08</p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

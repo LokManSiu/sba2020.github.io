@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/theme-yellow.css">
+<link rel="stylesheet" href="css/roboto.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onClick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-theme-l1">ABC Story</a>
+	<a href="index.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">主頁</a>
+    <a href="stories.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">故事選擇</a>
+    <a href="contactandabout.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">關於我們</a></div>
+  </div>
+</div>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onClick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content -->
+<div class="w3-main" style="">
+
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h3 class="w3-text-teal">三隻小豬</h3>
+      <h3><p>
+        <a href="stories.html">返回</a>
+      </p></h3>
+    </div>
+  </div>
+    
+  <div class="w3-container w3-half">
+    <table class="w3-table w3-bordered">
+      <tr>
+        <td>TODO Story Video</td>
+      </tr>
+      <tr>
+        <td>TODO Characters</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="w3-container w3-half">
+    <table class="w3-table w3-bordered">
+      <tr><h5>
+        <p>豬媽媽和三個可愛的小豬寶寶住在一個遙遠的山村裏，一天豬媽媽說你們已經長大了要自己蓋房子單獨住了。於是老大在空地中間搭了一座簡易的稻草屋</p>
+        <p>老二蓋了一間木房子，比老大的要漂亮結實得多，豬小弟用整整三個月的時間蓋了一座堅固的石頭房子。</p>
+        <p>一天來了一隻大灰狼，一吹，老大的房子倒了。老大邊跑邊喊救命啊---，二弟趕忙讓大哥進了屋關好門，大野狼使勁的向大門撞去，嘩啦一聲木頭房子被撞倒了。</p>
+        <p>兄弟倆逃到老三家，豬小弟胸有成竹的說，放心吧，你們安全了。大灰狼對着石頭房子呼呼地吹氣，結果無濟於事，大野狼又用力去撞，結果撞得他眼冒金星，房子卻紋絲不動。</p>
+        <p>大野狼又憋足勁揮起大鐵錘敲了下去，沒想到錘子把兒斷了。大野狼爬上房頂想從煙囪溜進去，結果大野狼整條尾巴都燒焦了，只好急急忙忙的逃跑了。</p>
+      </h5></tr>
+    </table>
+  </div>
+
+  <footer id="myFooter">
+    <div class="w3-bottom w3-container w3-theme-l1">
+      <p>Complete by Siu Lok Man, 6D 08</p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
